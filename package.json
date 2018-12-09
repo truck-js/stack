@@ -1,7 +1,7 @@
 {
   "name": "@truck/stack",
   "version": "0.0.0-development",
-  "description": "A JavaScript implementation of the Queue data structure",
+  "description": "A JavaScript implementation of the Stack data structure",
   "main": "src/index.js",
   "scripts": {
     "build": "babel src --out-dir lib --ignore src/**/*.test.js",
