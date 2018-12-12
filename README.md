@@ -18,43 +18,43 @@ $ npm install --save @truck/stack
 
 ## Methods
 
-### _Methods >_ `constructor(maximumLength?: int)`
+### `constructor(maximumLength?: int)`
 
 Build a new stack. Pass an optional `maximumLength` which will limit the _Stack_ length, the default
 is _65535_.
 
-### _Methods >_ `empty(): void` (_O(1)_)
+### `empty(): void`
 
-Empties the _Stack_, resetting the length back to 0.
+**O(1)**. Empties the _Stack_, resetting the length back to 0.
 
-### _Methods >_ `isEmpty(): boolean` (_O(1)_)
+### `isEmpty(): boolean`
 
-Checks whether the _Stack_ is empty.
+**O(1)**. Checks whether the _Stack_ is empty.
 
-### _Methods >_ `isFull(): boolean` (_O(1)_)
+### `isFull(): boolean`
 
-Checks whether the _Stack_ is full.
+**O(1)**. Checks whether the _Stack_ is full.
 
-### _Methods >_ `peek(): any` (_O(1)_)
+### `peek(): any`
 
-Get the item at the front of the _Stack_ without removing it.
+**O(1)**. Get the item at the front of the _Stack_ without removing it.
 
-### _Methods >_ `pop(): any` (_O(1)_)
+### `pop(): any`
 
-Removes the top (last inserted) value from the _Stack_ and returns it.
+**O(1)**. Removes the top (last inserted) value from the _Stack_ and returns it.
 
-### _Methods >_ `push(value: any): void` (_O(1)_)
+### `push(value: any): void`
 
-Adds a value to the top of the _Stack_. Throws a `RangeError` when the addition will exceed the
-maximum length allowed (defined in the `constructor`).
+**O(1)**. Adds a value to the top of the _Stack_. Throws a `RangeError` when the addition will
+exceed the maximum length allowed (defined in the `constructor`).
 
-### _Methods >_ `toArray(): any[]` (_O(n)_)
+### `toArray(): any[]`
 
-Returns the _Stack_ as an array.
+**O(n)**. Returns the _Stack_ as an array.
 
 ## Properties
 
-### _Properties >_ `.length: number`
+### `.length: number`
 
 Returns the current length of the _Stack_.
 
@@ -101,7 +101,7 @@ Use the following command to run all the tests described below together:
 $ docker-compose run --rm app npm test
 ```
 
-### _Testing >_ Commit messages
+### Commit messages
 
 Commit messages are linted through the use of [husky](https://www.npmjs.com/package/husky) and
 [@commitlint/cli](https://www.npmjs.com/package/@commitlint/cli) using the
@@ -115,7 +115,7 @@ to get a better understanding of how commit messages are formatted.
 After doing an `npm install` the required git hooks wil be added automatically and commit messages
 will be linted automatically.
 
-### _Testing >_ Linting
+### Linting
 
 Linting is done using [eslint](https://eslint.org/) using the
 [eslint-config-airbnb-base](https://www.npmjs.com/package/eslint-config-airbnb-base) configuration
@@ -128,7 +128,7 @@ Linting can be run in isolation through the command:
 $ docker-compose run --rm app npm run test:lint
 ```
 
-### _Testing >_ Auditing
+### Auditing
 
 Auditing of dependencies is done through the [npm audit](https://docs.npmjs.com/cli/audit)
 command-line tool.
@@ -139,7 +139,7 @@ Auditing can be run in isolation through the command:
 $ docker-compose run --rm app npm run test:vulnerabilities
 ```
 
-### _Testing >_ Unit testing
+### Unit testing
 
 Unit testing is done with [jest](https://jestjs.io). The test file for each file to be tested is to
 be placed alongside the file in testing and marked with the `.test.js` extension.
@@ -155,7 +155,7 @@ $ docker-compose run --rm app npm run test:scripts
 Contributions are always welcome, just submit a PR to get the conversation going. Please make sure
 all tests pass before submitting a PR.
 
-### _Contributing >_ Releases
+### Releases
 
 The moment a PR is merged into the `master` branch
 [semantic-release](https://github.com/semantic-release/semantic-release) will kick-off a new
